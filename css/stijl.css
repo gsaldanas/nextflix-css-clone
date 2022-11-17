@@ -1,0 +1,214 @@
+/* drie basisstijlregels om je te helpen */
+:root {
+  font-size: 100%; /* zet je dit op 62.5%, dan is elke rem 10px waard, anders 16px */
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* importing fonts */
+@font-face {
+  font-family: netflixLight;
+  src: url(/fonts/Netflix-Sans-Light.otf);
+}
+@font-face {
+  font-family: netflixMedium;
+  src: url(/fonts/Netflix-Sans-Medium.otf);
+}
+@font-face {
+  font-family: netflixBold;
+  src: url(/fonts/Netflix-Sans-Bold.otf);
+}
+
+/* hier komt jouw css */
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* main hero image ovelay effect */
+main {
+  background-image: url(/images/netflix-brand-hero-image.jpeg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 2000px rgba(10, 10, 10, 0.572);
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  margin-bottom: auto;
+  width: 100%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  width: 100%;
+}
+nav .logo-box img {
+  max-width: 125px;
+}
+
+/* left side of the nav with login and langs selction */
+.login-box {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.select-lang-box {
+  font-family: netflixLight;
+
+  border: solid white 1px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+}
+.select-lang-box::before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  content: "";
+  background: url(/icons/world.svg) no-repeat center center;
+  background-size: cover;
+  filter: invert();
+}
+.select-lang-box > select {
+  background: none;
+  color: white;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.inloggen-btn {
+  font-family: netflixLight;
+
+  color: white;
+  text-decoration: none;
+  background-color: #e60020;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 100;
+  letter-spacing: 0.3px;
+}
+/* hero content box */
+.hero-content-box {
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.hero-content-box h1 {
+  font-family: netflixMedium;
+  font-size: 3.5rem;
+  color: white;
+  max-width: 75%;
+  text-align: center;
+  margin: auto;
+  line-height: 3.75rem;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.hero-content-box h2 {
+  font-family: netflixLight;
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.hero-content-box h3 {
+  font-family: netflixLight;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+/* form style */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-field-box {
+  max-width: 500px;
+  width: 100%;
+}
+input[type="email"] {
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+button {
+  height: 3.5rem;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: netflixLight;
+  font-size: 1.5rem;
+  padding: 0rem 2rem;
+  background-color: #e60020;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.chevron-icon {
+  filter: invert();
+  width: 1.4rem;
+  margin-left: 15px;
+}
+section {
+  padding: 4rem;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-top: 10px rgb(43, 43, 43) solid;
+  border-bottom: 5px rgb(43, 43, 43) solid;
+}
+.container-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.card-text {
+  width: 50%;
+}
+.card-text h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.card-text h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.card-img-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.card-img-box img {
+  max-width: 100%;
+  width: 450px;
+}
